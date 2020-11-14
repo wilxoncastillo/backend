@@ -24,7 +24,7 @@
                         <div class="col-md-10">
                             <p>{{ $juego->id }}</p>
                             <p>{{ $juego->nombre }}</p>
-                            <p><a href="{{ $juego->url_juego }}">{{ $juego->url_juego }}</a></p>
+                            <p><a href="{{ $juego->url_juego }}" target="_blank">{{ $juego->url_juego }}</a></p>
                             <p>{{ $juego->descripcion }}</p>
                             <p><img src="{{ $juego->url_imagen }}"></p>
                             <p>{{ $juego->url_imagen }}</p>
@@ -40,18 +40,19 @@
                             <p>{{ $juego->estatus }}</p>
                         </div>
                     </div>
+                        <hr>
+                        <a class="btn btn-danger float-right" 
+                            href="#"
+                            onclick="document.getElementById('delete-project').submit()"
+                            >Eliminar
+                        </a>
+                        <form id="delete-project"
+                            class="d-none"
+                            method="POST" action="{{ route('juego.destroy', $juego) }}">
+                            @csrf 
+                            @method('DELETE')
+                        </form>
                 </div>
-                <a class="btn btn-danger" 
-                    href="#"
-                    onclick="document.getElementById('delete-project').submit()"
-                    >Eliminar
-                </a>
-                <form id="delete-project"
-                    class="d-none"
-                    method="POST" action="{{ route('juego.destroy', $juego) }}">
-                    @csrf 
-                    @method('DELETE')
-                </form>
             </div>
         </div>
     </div>

@@ -22,8 +22,7 @@
                         @method('PUT')
 
 		                @include('juegos._form')
-						
-						<button class="btn btn-primary btn-lg btn-block">Actualizar</button>
+						  <button class="btn btn-primary">Actualizar</button>
 		            </form>
 					
                 </div>

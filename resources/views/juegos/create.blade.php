@@ -23,7 +23,7 @@
 		                @include('juegos._form')
 						
 
-						<button class="btn btn-primary btn-lg btn-block">Guardar</button>
+						<button class="btn btn-primary">Guardar</button>
 		            </form>
 					
                 </div>

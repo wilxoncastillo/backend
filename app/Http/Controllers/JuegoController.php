@@ -61,7 +61,7 @@ class JuegoController extends Controller
         $juego->estatus = $request->get('estatus');
         $juego->save();
 
-        return redirect()->route('juego.index')->with('status', 'El juego fue creado con éxito');
+        return redirect()->route('juego.index')->with('status', 'El registro fue creado con éxito');
     }
 
     /**
@@ -115,7 +115,7 @@ class JuegoController extends Controller
         $juego->estatus = $request->get('estatus');
         $juego->update();
 
-        return redirect()->route('juego.index')->with('status', 'El juego fue actualizado con éxito');
+        return redirect()->route('juego.index')->with('status', 'El registro fue actualizado con éxito');
     }
 
     /**
@@ -129,6 +129,6 @@ class JuegoController extends Controller
         $juego->delete();
 
         return redirect()->route('juego.index')
-            ->with('status', 'El juego fue eliminado con éxito.');
+            ->with('status', 'El registro fue eliminado con éxito.');
     }
 }

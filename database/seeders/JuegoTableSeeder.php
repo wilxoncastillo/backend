@@ -49,7 +49,7 @@ class JuegoTableSeeder extends Seeder
         $juego->save();
 
         $juego = new Juego;
-        $juego->nombre = 'CAISHEN’S ARRIVAL';
+        $juego->nombre = "CAISHEN'S ARRIVAL";
         $juego->url_juego ='https://latamwin-gp3.discreetgaming.com/cwguestlogin.do?bankId=3006&gameId=812&lang=es';
         $juego->descripcion = 'JUEGO CAISHEN’S ARRIVAL';
         $juego->url_imagen = 'https://winchiletragamonedas.com/public/images/games/caishens_arrival.jpeg';
