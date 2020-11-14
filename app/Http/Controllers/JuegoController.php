@@ -21,7 +21,7 @@ class JuegoController extends Controller
     public function index()
     {
         return view('juegos.index', [
-            'juegos' => Juego::paginate()
+            'juegos' => Juego::orderBy('id', 'desc')->paginate()
         ]);
     }
 

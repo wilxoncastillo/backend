@@ -19,8 +19,8 @@
                         </div>
                     @endif
 
-                    <table class="table">
-					  <thead>
+                    <table class="table table-striped">
+					  <thead class="thead-dark">
 					    <tr>
 					      <th scope="col">Url</th>
 					      <th scope="col">Nombre</th>
@@ -28,7 +28,7 @@
 					      <th width="140px">Accion</th>
 					    </tr>
 					  </thead>
-					  <tbody>
+					  <tbody class=''>
 						  @foreach($juegos as $juego)
 						    <tr>
 						      <td><a href="{{ $juego->url_juego }}"  target="_blank">{{ $juego->url_juego }}</a> </td>
@@ -36,7 +36,7 @@
 						      <td>
 						      	<img src="{{ $juego->url_imagen }}">
 						      </td>
-						      <td>
+						      <td class="text-center">
 						      	<a  href="{{ route('juego.show', $juego) }}" class="btn btn-primary btn-sm" title="Mostrar">
 		                			<i class="fa fa-eye"></i>
 		            			</a>
