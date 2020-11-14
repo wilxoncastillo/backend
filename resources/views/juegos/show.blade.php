@@ -41,11 +41,16 @@
                         </div>
                     </div>
                         <hr>
+                        <a class="btn btn-warning" 
+                            href="{{ route('juego.edit', $juego) }}"
+                            >Editar
+                        </a>
                         <a class="btn btn-danger float-right" 
                             href="#"
                             onclick="document.getElementById('delete-project').submit()"
                             >Eliminar
                         </a>
+                        </div>
                         <form id="delete-project"
                             class="d-none"
                             method="POST" action="{{ route('juego.destroy', $juego) }}">
