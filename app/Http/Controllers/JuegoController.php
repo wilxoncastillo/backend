@@ -47,9 +47,9 @@ class JuegoController extends Controller
     {
         $request->validate([
             'nombre' => 'required|unique:juegos',
-            'url_juego' => 'required|unique:juegos',
+            'url_juego' => 'required|url|unique:juegos',
             'descripcion' => 'required',
-            'url_imagen' => 'required|unique:juegos',
+            'url_imagen' => 'required|url|unique:juegos',
             'estatus' => 'required',
         ]);
 
@@ -101,9 +101,9 @@ class JuegoController extends Controller
     {
         $request->validate([
             'nombre' => ['required', Rule::unique('juegos')->ignore($juego->id)],
-            'url_juego' => ['required', Rule::unique('juegos')->ignore($juego->id)],
+            'url_juego' => ['required', 'url', Rule::unique('juegos')->ignore($juego->id)],
             'descripcion' => 'required',
-            'url_imagen' => ['required', Rule::unique('juegos')->ignore($juego->id)],
+            'url_imagen' => ['required', 'url', Rule::unique('juegos')->ignore($juego->id)],
             'estatus' => 'required',
         ]);
 

@@ -23,11 +23,17 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 /*
 Route::get("/juego", [App\Http\Controllers\JuegoController::class, "index"])->name('juego.index');
+
 Route::get("/juego/crete", [App\Http\Controllers\JuegoController::class, "create"])->name('juego.create');
+
 Route::post("/juego", [App\Http\Controllers\JuegoController::class, "store"])->name('juego.store');
+
 Route::get("/juego/{juego}", [App\Http\Controllers\JuegoController::class, "show"])->name('juego.show');
+
 Route::delete("/juego/{juego}", [App\Http\Controllers\JuegoController::class, "destroy"])->name('juego.destroy');
+
 Route::get("/juego/edit/{juego}", [App\Http\Controllers\JuegoController::class, "edit"])->name('juego.edit');
+
 Route::put("/juego/{juego}", [App\Http\Controllers\JuegoController::class, "update"])->name('juego.update');
 */
 

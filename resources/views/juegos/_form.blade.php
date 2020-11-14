@@ -6,6 +6,7 @@
 	        id="nombre"
 	        type="text"
 	        name="nombre"
+	        required
 	        value="{{ old('nombre', $juego->nombre) }}"
 	    >
 	</div>
@@ -16,6 +17,7 @@
 	        id="url_juego"
 	        type="url"
 	        name="url_juego"
+	        required
 	        value="{{ old('url_juego', $juego->url_juego) }}"
 	    >
 	</div>
@@ -26,6 +28,7 @@
 	        id="descripcion"
 	        type="text"
 	        name="descripcion"
+	        required
 	        value="{{ old('descripcion', $juego->descripcion) }}"
 	    >
 	</div>
@@ -36,6 +39,7 @@
 	        id="url_imagen"
 	        type="url"
 	        name="url_imagen"
+	        required
 	        value="{{ old('url_imagen', $juego->url_imagen) }}"
 	    >
 	</div>
